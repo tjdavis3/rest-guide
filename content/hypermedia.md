@@ -25,41 +25,21 @@ All `href` hyperlinks are derived from this minimal link type:
 
 <div class="formalpara-title">
 
-**HttpLink JSON data type (from [common-v1.yaml](https://github.com/belgif/openapi-common/blob/master/src/main/swagger/common/v1/common-v1.yaml))**
+**HttpLink JSON data type (from [common-v1.yaml](https://github.com/tjdavis3/rest-guide/tree/master/content/openapi/common-v1.yaml))**
 
 </div>
 
-``` YAML
-HttpLink:
-  description: A base type of objects representing links to resources.
-  type: object
-  properties:
-    href:
-      description: Any absolute URI that is using http or https protocol
-      type: string
-      format: uri
-      readOnly: true
-```
+{{< readfile file="openapi/schemas/httplink.yaml" code="true" lang="yaml" >}}
 
 `self` hyperlinks are derived from the following type:
 
 <div class="formalpara-title">
 
-**SelfLink JSON data type (from [common-v1.yaml](https://github.com/belgif/openapi-common/blob/master/src/main/swagger/common/v1/common-v1.yaml))**
+**SelfLink JSON data type (from [common-v1.yaml](https://github.com/tjdavis3/rest-guide/tree/master/content/openapi/common-v1.yaml))**
 
 </div>
 
-``` YAML
-SelfLink:
-  description: A base type representing a link to the resource's own location within its representation
-  type: object
-  properties:
-    self:
-      description: Absolute URI (http or https) to the the resource's own location.
-      type: string
-      format: uri
-      readOnly: true
-```
+{{< readfile file="openapi/schemas/selflink.yaml" code="true" lang="yaml" >}}
 
 Links should not be used in request bodies in a PUT, POST or PATCH context, as indicated by the `readOnly: true` property.
 In a JSON response, they can be added anywhere.

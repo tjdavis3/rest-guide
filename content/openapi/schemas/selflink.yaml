@@ -1,0 +1,9 @@
+SelfLink:
+  description: A base type representing a link to the resource's own location within its representation
+  type: object
+  properties:
+    self:
+      description: Any absolute URI that is using http or https protocol
+      type: string
+      format: uri
+      readOnly: true
