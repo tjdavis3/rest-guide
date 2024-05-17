@@ -37,7 +37,7 @@ permalinkable = false
 [menu]
     [[menu.main]]
         name = "Home"
-        url = "/"
+        url = "https://tjdavis.dev/"
         weight = 1
 
 #    [[menu.main]]
